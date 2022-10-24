@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+    <!-- ======= Header ======= -->
+    {{ partial "header.html" . }}
+    <!-- End Header -->
+
+    <main id="main">
+      <!-- ======= Hero Section ======= -->
+      {{ with .Params.hero_section}}
+      <section
+        id="hero"
+        class="d-flex align-items-center"
+        style="background-image: url('{{.bg_image}}')"
+      >
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div class="col-lg-7 content">
+              <h2>{{.title}}</h2>
+              <h3>
+                <span>{{.sub_title}}</span>
+              </h3>
+              <h2>{{.secont_title}}</h2>
+
+              <p>{{.content}}</p>
+            </div>
+
+            <div class="col-lg-4"></div>
+          </div>
+        </div>
+      </section>
+      {{end}}
+      <!-- End Hero Section -->
+
+      <!-- ======= Hero Section ======= -->
+      {{with .Params.section}}
+      <section
+        id="hero"
+        class="d-flex align-items-center"
+        style="background: #fff"
+      >
+        <div class="container" data-aos="fade-up">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <img src="{{.image}}" alt="{{.title}}" class="img-fluid" />
+            </div>
+            <div class="col-lg-8 content">
+              <h2>{{.title}}</h2>
+
+              <p>{{.content}}</p>
+
+              <a href="/{{.button_link}}"
+                >{{.button_label}} <i class="bi bi-arrow-right-short"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      {{end}}
+      <!-- End Hero Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    {{ partial "footer.html" . }}
+    <!-- End Footer -->
+
+    <!-- ======= Header ======= -->
+    {{ partial "script.html" . }}
+    <!-- End Header -->
+  </body>
+</html>
