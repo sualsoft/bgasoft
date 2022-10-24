@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+
+  <body>
+    <!-- ======= Header ======= -->
+    {{ partial "header.html" . }}
+    <!-- End Header -->
+
+    <main id="main">
+      <!-- ======= Hero Section ======= -->
+      <section id="hero" class="d-flex align-items-center">
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div class="col-lg-7 content">
+              <h2>
+                Software Services and Solutions for the Drug Discovery,
+                Development,and Delivery Industry
+              </h2>
+
+              <h3>
+                <span>We are leader in cloud based informatics solution. </span>
+                With our deep laboratory domain expertise, we provide software
+                development and integration service for implementing
+                <span>our solutions, your solutions,</span> or
+                <span>our combined solutions,</span> Our teams solve some of the
+                biggest information technology challenges facing laboratory
+                business today.
+              </h3>
+
+              <a href="/"
+                >Find out how <i class="bi bi-arrow-right-short"></i
+              ></a>
+            </div>
+
+            <div class="col-lg-4"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Hero Section -->
+
+      <!-- ======= Services Section ======= -->
+      <section id="services">
+        <div class="container" data-aos="fade-up">
+          <div class="row gy-4">
+            <!-- Main service-->
+            {{range sort .Site.Data.services "id" "asc"}}
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="box">
+                <img
+                  src="/assets/img/icons/{{.img}}.svg"
+                  alt=""
+                  class="box-icon"
+                />
+                <h4 class="title"><a href="{{.url}}">{{.title}}</a></h4>
+                <p class="description">{{.detail}}</p>
+                <a href="{{.url}}">Learn more</a>
+              </div>
+            </div>
+            {{end}}
+            <!--send of main service-->
+          </div>
+        </div>
+      </section>
+      <!-- End Services Section -->
+
+      <!-- ======= section-1 Section ======= -->
+      <section id="section-1">
+        <div class="container" data-aos="zoom-out">
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-start align-center">
+              <h2 class="section-1-title mb-5">PRODUCTS</h2>
+            </div>
+            <div class="col-lg-4">
+              <div
+                class="card d-flex flex-column justify-content-center align-items-center"
+              >
+                <div class="icon">
+                  <img src="/assets/img/icons/icons.svg" alt="" />
+                </div>
+                <h3><a href="">Clinical Trials LIMS</a></h3>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div
+                class="card d-flex flex-column justify-content-center align-items-center"
+              >
+                <div class="icon">
+                  <img src="/assets/img/icons/icons.svg" alt="" />
+                </div>
+                <h3><a href="">Agile Part 11</a></h3>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div
+                class="card d-flex flex-column justify-content-center align-items-center"
+              >
+                <div class="icon">
+                  <img src="/assets/img/icons/icons.svg" alt="" />
+                </div>
+                <h3><a href="">Graphabc</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section-1 Section -->
+
+      <!-- ======= section-2 Section ======= -->
+      <section id="section-2">
+        <div class="container" data-aos="zoom-out">
+          <div class="row">
+            <div class="col-lg-10 text-center text-lg-start align-center">
+              <h2 class="section-2-title mb-3">ABOUT BGASoft Ink</h2>
+              <p class="section-2-text">
+                BGASoft is a frontrunner in cloud informatics solutions for the
+                laboratory, software development service, and validation, in
+                regulated and non-regulated environments.
+                <br />
+                BGASoft pffers turkey LIS solutions for toxicology, molecular,
+                biosample respositories, and medical billing & coding, built on
+                its open, flexible, LIMSABC platform. LIMSABC's platform can
+                also be easily configured as a standard LIMS businness workflow
+                system such as for manufacturing, petroleum & mining,
+                pharmaceuticals, or any laboratory service need. Fully
+                configurable and easily interfaced.
+                <br />
+                We now offer AuditABC, a configurable tool for managing data
+                integrity through the data lifecycle that also provides a
+                central analytics platform to monitor audit trails from multiple
+                systems.
+                <br />
+                We also offer AgilePart 11, a 21 CFR Part 11 based compliance
+                tool that enables paperless compliance as well as Product /
+                Application Lifecyle Management.
+                <br />
+                BGASoft can offer fuller, more customized solutions through its
+                professional Service organization that offers consulting on all
+                aspectsof the software development lifecycle including software
+                development and validation.
+                <br />
+                BGASoft is able to partner with you needs for managing
+                laboratory data throughout its lifecycle and with GxP in mind.
+              </p>
+              <p>
+                <strong></strong>
+                  BGASoft is here to offer software solutions to meet your
+                  laboratory needs.</strong
+                >
+              </p>
+            </div>
+            <div class="col-lg-2 d-flex justify-content-end align-items-end">
+              <img src="/assets/img/logo-2.png" alt="Logo BGASoft" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section-2 Section -->
+
+      <!-- ======= section-3 Section ======= -->
+      <section class="call-to-action">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="mb-4">FEATURED BLOG ARTICLE</h2>
+            </div>
+            <div class="col-lg-12 ">
+              <div class="cta-background">
+              <div class="content ">
+                <p>Why We Went Cloud with our Laboratory Information Framework</p>
+                <p><a href="">Read More</a></p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section-3 Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    {{ partial "footer.html" . }}
+    <!-- End Footer -->
+
+    <!-- ======= Header ======= -->
+    {{ partial "script.html" . }}
+    <!-- End Header -->
+  </body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "cfr": {
+    "title": "21 CFR Part 11 Validation",
+    "img": "icon-1",
+    "url": "/",
+    "detail": "Quickly staff projects with high-value US and Eastern European experts",
+    "id": "1"
+  },
+  "starlims": {
+    "title": "STARLIMS Services",
+    "img": "icon-2",
+    "url": "/",
+    "detail": "We use 21st century yechnology including cloud, LAMP, and mobile solutions.",
+    "id": "2"
+  },
+  "clinical": {
+    "title": "Clinical Trial Solution",
+    "img": "icon-3",
+    "url": "/",
+    "detail": "Supplement your in-house software validation efforts in regulated environments",
+    "id": "3"
+  },
+  "software": {
+    "title": "Software Architecture",
+    "img": "icon-4",
+    "url": "/",
+    "detail": "Reduce total cost of ownership from the start with an experienced partner",
+    "id": "4"
+  },
+  "flexible": {
+    "title": "Flexible Solution Framework",
+    "img": "icon-5",
+    "url": "/",
+    "detail": "Build the solution you need on our open, flexible informatics platform",
+    "id": "5"
+  },
+  "legacy": {
+    "title": "Legacy LIS Improvements",
+    "img": "icon-6",
+    "url": "/",
+    "detail": "Get more out of your existing Laboratory Informatics System",
+    "id": "6"
+  }
+}

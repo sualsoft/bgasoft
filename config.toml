@@ -1,0 +1,78 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'BGASoft Software Consulting and Software Development Company'
+
+[menu]
+
+[[menu.nav]]
+  identifier = 'Home'
+  name = 'Home'
+  title = 'Home'
+  pageref = '/'
+  url = '/'
+  weight = 1
+
+
+[[menu.nav]]
+  identifier = 'Core competencies'
+  name = 'Core competencies'
+  title = 'Core competencies'
+  pageref = '/core-competencies'
+  url = '/core-competencies'
+  weight = 2
+
+[[menu.nav]]
+  identifier = 'Services'
+  name = 'Services'
+  title = 'Services'
+  pageref = '/services'
+  url = '/services'
+  weight = 3
+
+[[menu.nav]]
+  identifier = 'Blog'
+  name = 'Blog'
+  title = 'Blog'
+  pageref = '/blog'
+  url = '/blog'
+  weight = 4
+
+[[menu.nav]]
+  identifier = 'Products'
+  name = 'Products'
+  title = 'Products'
+  pageref = '/products'
+  url = '/products'
+  weight = 5
+
+[[menu.nav]]
+  identifier = 'Contact'
+  name = 'Contact'
+  title = 'Contact'
+  pageref = '/contact'
+  url = '/contact'
+  weight = 6
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = 'github'
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false
+      xhtml = false
+
+paginate = 2

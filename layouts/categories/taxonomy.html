@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+    <!-- ======= Header ======= -->
+    {{ partial "header.html" . }}
+    <!-- End Header -->
+
+    <main id="main">
+      <!-- ======= Portfolio Details Section ======= -->
+      <section class="blog">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="row">
+                {{ range .Paginator.Pages }}
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="blog-tile">
+                    <div class="blog-image">
+                      <img src="{{.Params.image}}" alt="" class="img-fluid" />
+                    </div>
+                    <div class="date">
+                      <p>{{.Date | time.Format ":date_long"}}</p>
+                    </div>
+                    <div class="title">
+                      <h3>
+                        <a href="{{.Permalink}}">{{.Title}}</a>
+                      </h3>
+                    </div>
+                    <div class="summary">
+                      <p>{{.Summary}}</p>
+                    </div>
+                  </div>
+                </div>
+                {{end}}
+              </div>
+              {{ partial "pagination" . }}
+            </div>
+            <div class="col-lg-3">
+              <img
+                src="/assets/img/blog/blog-ilustration.svg"
+                alt="Blog Illustration"
+              />
+
+              <div class="search-info">
+                <h3>BLOG</h3>
+                <ul>
+                  <li>{{ partial "search-form.html" . }}</li>
+                </ul>
+              </div>
+              <div class="blog-categories">
+                <h3>CATEGORIES</h3>
+                <ul>
+                  {{range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+                  <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                  {{end}}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Portfolio Details Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    {{ partial "footer.html" . }}
+    <!-- End Footer -->
+
+    <!-- ======= Header ======= -->
+    {{ partial "script.html" . }}
+    <!-- End Header -->
+  </body>
+</html>
