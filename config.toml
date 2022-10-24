@@ -49,8 +49,8 @@ title = 'BGASoft Software Consulting and Software Development Company'
   identifier = 'Contact'
   name = 'Contact'
   title = 'Contact'
-  pageref = '/contact'
-  url = '/contact'
+  pageref = '/contact-us'
+  url = '/contact-us'
   weight = 6
 
 
